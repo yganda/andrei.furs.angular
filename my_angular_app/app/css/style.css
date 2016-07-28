@@ -1,0 +1,18 @@
+form {
+	max-width: 50%;
+	min-height: 228px;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	padding: 10px;
+	max-height: 100%;
+}
+
+input {
+	width: 95%;
+	margin-top: 38px;
+}
+
+span {
+	float: left;
+	color: blue;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "angular_app">
+<head>
+	<meta charset="UTF-8">
+	<title>My Angular App</title>
+	<link rel="stylesheet" type="text/css" href="app/css/style.css">
+	<script type="application/javascript" src = "node_modules/angular/angular.min.js"></script>
+	<script type="application/javascript" src = "node_modules/lodash/lodash.min.js"></script>
+	<script type="application/javascript" src = "angular_app.js"></script>
+	<script type="application/javascript" src = "app/directives/age.dir.js"></script>
+	<script type="application/javascript" src = "app/directives/date.dir.js"></script>
+	<script type="application/javascript" src = "app/directives/username.dir.js"></script>
+</head>
+<body>
+	<form name="form" novalidate>
+		<div>
+			<input type="text" ng-model="username" name="username" username placeholder="Enter you First and Last name" />
+			<div  ng-show="form.$submitted || form.username.$touched">
+				<span ng-show="form.username.$error.lengthName">Hm, if you are not China-men, you must have more than 3 chars in your first or last name, sorry!</span>
+				<span ng-show="form.username.$error.badName">Hm, you name can't contain special chars or numbers, sorry!</span>
+				<span ng-show="form.username.$error.moreWord">Hm, you need enter first and last name only, no more)</span>
+			</div>
+		</div>
+		<div>
+			<input type="text" ng-model="age" name="age" integer placeholder="Enter you age" />
+			<div  ng-show="form.$submitted || form.age.$touched">
+				<span ng-show="form.age.$error.integer">The value is not a valid integer!</span>
+				<span ng-show="form.age.$error.range">The value must be in range 18-65!</span>
+			</div>
+		</div>
+		<div>
+			<input type="text" ng-model="date" name="date" date placeholder="Enter you birthday in format DD.MM.YYYY" />
+			<div  ng-show="form.$submitted || form.date.$touched">
+				<span ng-show="form.date.$error.format">Wrong format</span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
