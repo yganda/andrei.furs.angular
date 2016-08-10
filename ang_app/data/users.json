@@ -1,0 +1,12 @@
+[
+	{
+		"uId": 1,
+		"uLogin": "user1",
+		"uPassword": "user1"
+	},
+	{
+		"uId": 2,
+		"uLogin": "user2",
+		"uPassword": "user2"
+	}
+]

@@ -1,0 +1,10 @@
+<h2>{{ title }}</h2>
+<form ng-submit="forgotForm.$valid" name="forgotForm" layout="column" novalidate> <!-- flex -->
+	<div>
+		<label>Login</label>
+		<input ng-model="user.login" ng-minlength="3" name="login" required>
+	</div>
+	<div layout="row" layout-align="center" layout-wrap>
+		<button type="submit"ng-click="getPass()" ng-disabled="forgotForm.$invalid">Send</button>
+	</div>
+</form>

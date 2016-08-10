@@ -1,0 +1,13 @@
+{
+  "name": "ang_app",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "0.3.1",
+    "body-parser": "1.15.2",
+    "express": "4.14.0",
+    "express-session": "1.14.0",
+    "lodash": "4.14.1",
+    "node-cache": "3.2.1"
+  }
+}

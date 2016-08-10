@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="ang_app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Angular App</title>
+		<script src="node_modules/lodash/lodash.min.js"></script>
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="app/src/ang_app.js"></script>
+		<script src="app/src/login/loginController.js"></script>
+	 	<script src="app/src/logout/logoutController.js"></script>
+		<script src="app/src/home/homeController.js"></script>
+		<script src="app/src/forgot/forgotController.js"></script>
+		<script src="app/src/home/tabs/personalController.js"></script>
+		<script src="app/src/home/tabs/editController.js"></script>
+	</head>
+	<body>
+			<div>
+				<div class = "header">
+					<a href = "#" ui-sref="home" ng-hide="!logged" name="home">Home</a>
+					<a href = "#" ui-sref="login" ng-hide="logged" name="login">Login</a>
+					<a href = "#" ui-sref="logout" ng-hide="!logged" name="logout">Logout</a>
+				</div>
+			</div>
+			<ui-view></ui-view>
+	</body>
+</html>
